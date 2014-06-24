@@ -5,16 +5,12 @@ How is the sort performed?
 
 Sorting is done stepwise. The columns (1-indexed for the UNIX bash shell) are:
 
-30 : Oracle Penalty (this penalty is based on the Oracle program; more details to follow below)
+> 30 : Oracle Penalty (this penalty is based on the Oracle program; more details to follow below)  
+> 12 : Inclusivity of the all of the desired <inclusion set> allowing for 2 total mismatches  
+> 10 : Inclusitivy of the of the desired <inclusion set> allowing for 0 total mismatches  
+> 2 : Thermodynamic penalty assessed by primer3 based on self-dimerization, hetero-dimerization, GC richness, ect.  
 
-12 : Inclusivity of the all of the desired <inclusion set> allowing for 2 total mismatches
-
-10 : Inclusitivy of the of the desired <inclusion set> allowing for 0 total mismatches
-
-2 : Thermodynamic penalty assessed by primer3 based on self-dimerization, hetero-dimerization, GC richness, ect.
-
-
-##Oracle Penalty##
+## Oracle Penalty Methods ##
 
 ###Similarity dependent penalty###
 
@@ -38,8 +34,8 @@ In this method, each primer is delivered to the program Oracle3.py as a tab deli
 >15: Percent of inclusion set matched with 6 total mismatches  
 >16: Accessions of inclusion set matched with 6 total mismatches  
 >17: Percent of inclusion set matched with 8 total mismatches  
->18: Accessions of inclusion set matched with 8 total mismatches 
->19: Percent of EXCLUSION set matched with no mismatches  
+>18: Accessions of inclusion set matched with 8 total mismatches     
+>19: Percent of EXCLUSION set matched with no mismatches   
 >20: Accessions of EXCLUSION set matched with no mismatches  
 >21: Percent of EXCLUSION set matched with 2 total mismatches  
 >22: Accessions of EXCLUSION set matched with 2 total mismatches  
@@ -87,4 +83,7 @@ Below the penalty discount was applied.
 
 > 30.091169106  
 
-###Similarity independent penalty###
+### Similarity independent penalty ###
+
+Appropriate primers can also be found simply by sorting the mismatch percentage column. 
+
